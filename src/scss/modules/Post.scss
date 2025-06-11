@@ -1,0 +1,6 @@
+@use 'variables' as *;
+
+.Post{
+  padding: 10px;
+  border: solid $secondaryColor 3px;
+}

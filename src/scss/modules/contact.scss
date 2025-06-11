@@ -1,0 +1,18 @@
+@use 'variables' as *;
+
+.contact {
+  padding-top: 10px;
+  margin: 0 0 0 40px;
+  width: 100%;
+
+  ul {
+    list-style-type: none;
+    &__address {
+      font-style: normal;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

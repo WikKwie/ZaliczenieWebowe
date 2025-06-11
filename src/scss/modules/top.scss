@@ -1,0 +1,108 @@
+@use 'variables' as *;
+
+.top {
+  position: relative;
+
+  &__baner {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    display: block;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+
+    @media (min-width: $laptopBreakpoint) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  &__logo-wrapper {
+    position: relative;
+    margin-top: -50px;
+    z-index: 2;
+
+    @media (min-width: $laptopBreakpoint) {
+      margin-top: -75px;
+      position: static;
+    }
+  }
+
+  &__logo {
+    width: 100px;
+    height: auto;
+    border-radius: 60%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $laptopBreakpoint) {
+      flex-direction: row;
+      gap: 15px;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 20px 10px 0;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    @media (min-width: $laptopBreakpoint) {
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: $laptopBreakpoint) {
+      margin-top: 0;
+      justify-content: flex-end;
+    }
+
+    button {
+      padding: 8px 12px;
+      background-color: $primaryColor;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: gray;
+      }
+
+      &:first-child {
+        background-color: $secondaryColor;
+
+        &:hover {
+          background-color: #1466d6;
+        }
+      }
+    }
+  }
+}
